@@ -7,7 +7,7 @@ Technology specific interface definition for a pure Ethernet structure on a phys
 
 ### UML
 - Thorsten Heinze (Thorsten.Heinze@openBackhaul.com)
-- 2.0.0-tsp.190205.1530 : [](./)
+- 2.0.0-tsp.190205.1530 : [190205 PureEthernetStructurePac.zip](./190205%20PureEthernetStructurePac.zip)
 
 ### Overview 
 - Thorsten Heinze (Thorsten.Heinze@openBackhaul.com)
