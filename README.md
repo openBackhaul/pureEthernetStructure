@@ -11,7 +11,7 @@ Technology specific interface definition for a pure Ethernet structure on a phys
 
 ### Overview 
 - Thorsten Heinze (Thorsten.Heinze@openBackhaul.com)
-- 1.1.0-tr532v1_1.190410.1620+overview.1 : [pureEthernetStructureCD](./pureEthernetStructureCD.PNG)
+- 1.1.0-tr532v1_1.190410.1620+overview.1 : [PureEthernetStructureCD](./PureEthernetStructureCD.PNG)
 
 ### List of Classes
 - not provided
