@@ -7,22 +7,20 @@ Technology specific interface definition for a pure Ethernet structure on a phys
 
 ### UML
 - Thorsten Heinze (Thorsten.Heinze@openBackhaul.com)
-- 2.0.0-tsp.190205.1530 : [190205 PureEthernetStructurePac.zip](./190205%20PureEthernetStructurePac.zip)
+- [PureEthernetStructure_2.0.0-tsp.190430.1950](./PureEthernetStructure_2.0.0-tsp.190430.1950.zip)
 
 ### Overview 
 - Thorsten Heinze (Thorsten.Heinze@openBackhaul.com)
-- 2.0.0-tsp.190205.1530+overview.1 : [](./)
+- [PureEthernetStructure_2.0.0-tsp.190430.1950+overview.1](./PureEthernetStructure_2.0.0-tsp.190430.1950+overview.1.png)
 
 ### List of Classes
-- Thorsten Heinze (Thorsten.Heinze@openBackhaul.com)
-- 2.0.0-tsp.190205.1530+list.1 : [](./)
+- to be provided
 
 ### GenDoc Export
 - Thorsten Heinze (Thorsten.Heinze@openBackhaul.com)
-- 2.0.0-tsp.190205.1530+gendoc.1 : [](./)
+- [PureEthernetStructure_2.0.0-tsp.190430.1950+gendox.1](./PureEthernetStructure_2.0.0-tsp.190430.1950+gendox.1.docx)
 
 ### YANG File
-- Thorsten Heinze (Thorsten.Heinze@openBackhaul.com)
 - to be provided
 
 ### Interface Simulator
@@ -39,6 +37,7 @@ Technology specific interface definition for a pure Ethernet structure on a phys
 
 ### Open Issue List
 - Thorsten Heinze (Thorsten.Heinze@openBackhaul.com)
-- [bugtracker.openBackhaul.com](https://bugtracker.openBackhaul.com)
+- [pureEthernetStructure/issues](../../issues)
 
 ### Comments
+./.
