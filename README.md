@@ -14,7 +14,8 @@ Technology specific interface definition for a pure Ethernet structure on a phys
 - [PureEthernetStructure_2.0.0-tsp.190430.1950+overview.1](./PureEthernetStructure_2.0.0-tsp.190430.1950+overview.1.png)
 
 ### List of Classes
-- to be provided
+- Waseem Sattar (Waseem.Sattar@openBackhaul.com)
+- to be provided 
 
 ### GenDoc Export
 - Thorsten Heinze (Thorsten.Heinze@openBackhaul.com)
