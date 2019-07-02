@@ -1,5 +1,5 @@
 # pureEthernetStructure
-Technology specific amendment to the LayerProtocol class for structuring a microwave radio interface into a single Ethernet segment
+Technology specific interface definition for a pure Ethernet structure on a physical media
 
 ### [1.0.0](../../tree/TR532v1_0)
 - TR-532 v1.0 officially published by ONF in December 2016
