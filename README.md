@@ -21,6 +21,13 @@ Technology specific interface definition for a pure Ethernet structure on a phys
 - Thorsten Heinze (Thorsten.Heinze@openBackhaul.com)
 - [PureEthernetStructure_2.0.0-tsp.190430.1950+gendox.1](./PureEthernetStructure_2.0.0-tsp.190430.1950+gendox.1.docx)
 
+### Augmentation Condition
+- When statement in Augmentation statement demands for LayerProtocol::layerProtocolName==PURE_ETHERNET_STRUCTURE
+
+### YANG Header
+- Thorsten Heinze (Thorsten.Heinze@openBackhaul.com)
+- to be provided
+
 ### YANG File
 - to be provided
 
