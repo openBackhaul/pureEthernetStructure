@@ -24,10 +24,6 @@ Technology specific interface definition for a pure Ethernet structure on a phys
 ### Augmentation Condition
 - When statement in Augmentation statement demands for LayerProtocol::layerProtocolName==PURE_ETHERNET_STRUCTURE
 
-### YANG Header
-- Thorsten Heinze (Thorsten.Heinze@openBackhaul.com)
-- to be provided
-
 ### YANG File
 - to be provided
 
