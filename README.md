@@ -22,7 +22,7 @@ Technology specific interface definition for a pure Ethernet structure on a phys
 - [PureEthernetStructure_2.0.0-tsp.190702.1950+gendoc.1](./PureEthernetStructure_2.0.0-tsp.190702.1950+gendoc.1.docx)
 
 ### Augmentation Condition
-- When statement in Augmentation statement demands for LayerProtocol::layerProtocolName==PURE_ETHERNET_STRUCTURE
+- When statement in Augmentation statement demands for LayerProtocol::layerProtocolName==LAYER_PROTOCOL_NAME_PURE_ETHERNET_STRUCTURE_LAYER
 
 ### YANG File
 - to be provided
