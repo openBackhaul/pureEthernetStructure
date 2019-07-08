@@ -25,7 +25,8 @@ Technology specific interface definition for a pure Ethernet structure on a phys
 - When statement in Augmentation statement demands for LayerProtocol::layerProtocolName==LAYER_PROTOCOL_NAME_PURE_ETHERNET_STRUCTURE_LAYER
 
 ### YANG File
-- to be provided
+- Martin Skorupski (Martin.Skorupski@openBackhaul.com)
+- [PureEthernetStructure_2.0.0-tsp.190708.1345+yang.1](./PureEthernetStructure_2.0.0-tsp.190708.1345+yang.1.zip)
 
 ### Interface Simulator
 - to be provided
