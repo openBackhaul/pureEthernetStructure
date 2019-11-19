@@ -7,11 +7,11 @@ Technology specific interface definition for a pure Ethernet structure on a phys
 
 ### UML
 - Thorsten Heinze (Thorsten.Heinze@openBackhaul.com)
-- [PureEthernetStructure_2.0.0-tsp.190708.1345](./PureEthernetStructure_2.0.0-tsp.190708.1345.zip)
+- [PureEthernetStructure_2.0.0-tsp.191118.1500](./PureEthernetStructure_2.0.0-tsp.191118.1500.zip)
 
 ### Overview 
 - Thorsten Heinze (Thorsten.Heinze@openBackhaul.com)
-- [PureEthernetStructure_2.0.0-tsp.190708.1345+overview.1](./PureEthernetStructure_2.0.0-tsp.190708.1345+overview.1.png)
+- [PureEthernetStructure_2.0.0-tsp.191118.1500+overview.1](./PureEthernetStructure_2.0.0-tsp.191118.1500+overview.1.png)
 
 ### List of Classes
 - Waseem Sattar (Waseem.Sattar@openBackhaul.com)
@@ -19,7 +19,7 @@ Technology specific interface definition for a pure Ethernet structure on a phys
 
 ### GenDoc Export
 - Thorsten Heinze (Thorsten.Heinze@openBackhaul.com)
-- [PureEthernetStructure_2.0.0-tsp.190708.1345+gendoc.1](./PureEthernetStructure_2.0.0-tsp.190708.1345+gendoc.1.docx)
+- [PureEthernetStructure_2.0.0-tsp.191118.1500+gendoc.1](./PureEthernetStructure_2.0.0-tsp.191118.1500+gendoc.1.docx)
 
 ### Augmentation Condition
 - When statement in Augmentation statement demands for LayerProtocol::layerProtocolName==LAYER_PROTOCOL_NAME_TYPE_PURE_ETHERNET_STRUCTURE_LAYER
@@ -28,6 +28,7 @@ Technology specific interface definition for a pure Ethernet structure on a phys
 - Martin Skorupski (Martin.Skorupski@openBackhaul.com)
 - [PureEthernetStructure_2.0.0-tsp.190708.1345+yang.4](./PureEthernetStructure_2.0.0-tsp.190708.1345+yang.4.zip)
 - Please, see [issue#9](../../issues/9) and [issue#10](../../issues/10) for information on the latest change
+- PureEthernetStructure_2.0.0-tsp.191118.1500+yang.1
 
 ### Interface Simulator
 - to be provided
