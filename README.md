@@ -26,9 +26,7 @@ Technology specific interface definition for a pure Ethernet structure on a phys
 
 ### YANG File
 - Martin Skorupski (Martin.Skorupski@openBackhaul.com)
-- [PureEthernetStructure_2.0.0-tsp.190708.1345+yang.4](./PureEthernetStructure_2.0.0-tsp.190708.1345+yang.4.zip)
-- Please, see [issue#9](../../issues/9) and [issue#10](../../issues/10) for information on the latest change
-- PureEthernetStructure_2.0.0-tsp.191118.1500+yang.1
+- [PureEthernetStructure_2.0.0-tsp.191118.1500+yang.1](./PureEthernetStructure_2.0.0-tsp.191118.1500+yang.1.zip)
 
 ### Interface Simulator
 - to be provided
