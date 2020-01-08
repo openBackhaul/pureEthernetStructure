@@ -33,7 +33,7 @@ Technology specific interface definition for a pure Ethernet structure on a phys
 - not planned
 
 ### Aspired Model Classification
-- Trial
+- Live Network
 
 ### Open Issue List
 - [pureEthernetStructure/issues](../../issues)
