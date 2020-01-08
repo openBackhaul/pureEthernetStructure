@@ -30,7 +30,7 @@ Technology specific interface definition for a pure Ethernet structure on a phys
 - [PureEthernetStructure_2.0.0-tsp.191123.1000+validator.1](./PureEthernetStructure_2.0.0-tsp.191123.1000+validator.1.zip)
 
 ### Publication
-- not planned
+- Candidate for ONF TR-532 v2.0 
 
 ### Aspired Model Classification
 - Live Network
