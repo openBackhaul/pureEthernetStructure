@@ -1,38 +1,33 @@
 # pureEthernetStructure
 Technology specific interface definition for a pure Ethernet structure on a physical media
+- Thorsten Heinze (Thorsten.Heinze@openBackhaul.com)
 
 ### Branch
-- Thorsten Heinze (Thorsten.Heinze@openBackhaul.com)
 - 2.0.0-tsp.d.t : Model for the Transport SDN Pilot at Telefonica Germany
 
 ### UML
-- Thorsten Heinze (Thorsten.Heinze@openBackhaul.com)
 - [PureEthernetStructure_2.0.0-tsp.191123.1000](./PureEthernetStructure_2.0.0-tsp.191123.1000.zip)
 
 ### Overview 
-- Thorsten Heinze (Thorsten.Heinze@openBackhaul.com)
 - [PureEthernetStructure_2.0.0-tsp.191123.1000+overview.1](./PureEthernetStructure_2.0.0-tsp.191123.1000+overview.1.png)
 
-### List of Classes
-- Waseem Sattar (Waseem.Sattar@openBackhaul.com)
-- to be provided
-
 ### GenDoc Export
-- Thorsten Heinze (Thorsten.Heinze@openBackhaul.com)
 - [PureEthernetStructure_2.0.0-tsp.191123.1000+gendoc.1](./PureEthernetStructure_2.0.0-tsp.191123.1000+gendoc.1.docx)
 
 ### Augmentation Condition
 - When statement in Augmentation statement demands for LayerProtocol::layerProtocolName==LAYER_PROTOCOL_NAME_TYPE_PURE_ETHERNET_STRUCTURE_LAYER
 
 ### YANG File
-- Martin Skorupski (Martin.Skorupski@openBackhaul.com)
 - [PureEthernetStructure_2.0.0-tsp.191123.1000+yang.1](./PureEthernetStructure_2.0.0-tsp.191123.1000+yang.1.zip)
+
+### JSON Schema
+- to be provided
 
 ### Interface Simulator
 - to be provided
 
 ### Interface Validator
-- to be provided
+- [PureEthernetStructure_2.0.0-tsp.191123.1000+validator.1](./PureEthernetStructure_2.0.0-tsp.191123.1000+validator.1.zip)
 
 ### Publication
 - not planned
@@ -41,7 +36,6 @@ Technology specific interface definition for a pure Ethernet structure on a phys
 - Trial
 
 ### Open Issue List
-- Thorsten Heinze (Thorsten.Heinze@openBackhaul.com)
 - [pureEthernetStructure/issues](../../issues)
 
 ### Comments
