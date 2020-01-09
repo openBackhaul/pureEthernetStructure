@@ -27,7 +27,7 @@ Technology specific interface definition for a pure Ethernet structure on a phys
 - to be provided
 
 ### Interface Validator
-- [PureEthernetStructure_2.0.0-tsp.191123.1000+validator.1](./PureEthernetStructure_2.0.0-tsp.191123.1000+validator.1.zip)
+- [PureEthernetStructure_2.0.0-tsp.191123.1000+validator.2](./PureEthernetStructure_2.0.0-tsp.191123.1000+validator.2.zip)
 
 ### Publication
 - Candidate for ONF TR-532 v2.0 
