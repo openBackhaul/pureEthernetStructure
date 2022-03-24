@@ -6,23 +6,26 @@ Technology specific interface definition for a pure Ethernet structure on a phys
 - 2.0.0-tsp.d.t : Model for the Transport SDN Pilot at Telefonica Germany
 
 ### UML
-- [PureEthernetStructure_2.0.0-tsp.191123.1000](./PureEthernetStructure_2.0.0-tsp.191123.1000.zip)
-- Intermediate Update: [PureEthernetStructure_2.0.0-tsp.200122.1325](./PureEthernetStructure_2.0.0-tsp.200122.1325.zip)
+- [PureEthernetStructure_2.0.0-tsp.191123.1000](./PureEthernetStructure_2.0.0-tsp.191123.1000.zip) (deprecated)
+- [PureEthernetStructure_2.0.0-tsp.200122.1325](./PureEthernetStructure_2.0.0-tsp.200122.1325.zip) (deprecated)
+- [PureEthernetStructure_2.0.0-tsp.220324.1645](./PureEthernetStructure_2.0.0-tsp.220324.1645.zip)
 
 ### Overview 
-- [PureEthernetStructure_2.0.0-tsp.191123.1000+overview.1](./PureEthernetStructure_2.0.0-tsp.191123.1000+overview.1.png)
-- Intermediate Update: [PureEthernetStructure_2.0.0-tsp.200122.1325+overview.1](./PureEthernetStructure_2.0.0-tsp.200122.1325+overview.1.png)
+- [PureEthernetStructure_2.0.0-tsp.191123.1000+overview.1](./PureEthernetStructure_2.0.0-tsp.191123.1000+overview.1.png) (deprecated)
+- [PureEthernetStructure_2.0.0-tsp.200122.1325+overview.1](./PureEthernetStructure_2.0.0-tsp.200122.1325+overview.1.png) (deprecated)
+- [PureEthernetStructure_2.0.0-tsp.220324.1645+overview.1](./PureEthernetStructure_2.0.0-tsp.220324.1645+overview.1.png)
 
 ### GenDoc Export
-- [PureEthernetStructure_2.0.0-tsp.191123.1000+gendoc.1](./PureEthernetStructure_2.0.0-tsp.191123.1000+gendoc.1.docx)
-- Intermediate Update: [PureEthernetStructure_2.0.0-tsp.200122.1325+gendoc.1](./PureEthernetStructure_2.0.0-tsp.200122.1325+gendoc.1.docx)
+- [PureEthernetStructure_2.0.0-tsp.191123.1000+gendoc.1](./PureEthernetStructure_2.0.0-tsp.191123.1000+gendoc.1.docx) (deprecated)
+- [PureEthernetStructure_2.0.0-tsp.200122.1325+gendoc.1](./PureEthernetStructure_2.0.0-tsp.200122.1325+gendoc.1.docx) (deprecated)
+- [PureEthernetStructure_2.0.0-tsp.220324.1645+gendoc.1](./PureEthernetStructure_2.0.0-tsp.220324.1645+gendoc.1.docx)
 
 ### Augmentation Condition
 - When statement in Augmentation statement demands for LayerProtocol::layerProtocolName==LAYER_PROTOCOL_NAME_TYPE_PURE_ETHERNET_STRUCTURE_LAYER
 
 ### YANG File
-- [PureEthernetStructure_2.0.0-tsp.191123.1000+yang.1](./PureEthernetStructure_2.0.0-tsp.191123.1000+yang.1.zip)
-- Intermediate Update: [PureEthernetStructure_2.0.0-tsp.200122.1325+yang.3](./PureEthernetStructure_2.0.0-tsp.200122.1325+yang.3.zip)
+- [PureEthernetStructure_2.0.0-tsp.191123.1000+yang.1](./PureEthernetStructure_2.0.0-tsp.191123.1000+yang.1.zip) (deprecated)
+- [PureEthernetStructure_2.0.0-tsp.200122.1325+yang.3](./PureEthernetStructure_2.0.0-tsp.200122.1325+yang.3.zip) (deprecated)
 
 ### JSON Schema
 - to be provided
