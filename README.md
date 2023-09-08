@@ -22,6 +22,7 @@ Technology specific interface definition for a pure Ethernet structure on a phys
 
 ### YANG File
 - [PureEthernetStructure_2.0.0-tsp.220328.1500+yang.2](./PureEthernetStructure_2.0.0-tsp.220328.1500+yang.2.zip) (deprecated)
+- [PureEthernetStructure_2.0.0-tsi.230907.1715+yang.1](./PureEthernetStructure_2.0.0-tsi.230907.1715+yang.1.zip)
 
 ### JSON Schema
 - to be provided
