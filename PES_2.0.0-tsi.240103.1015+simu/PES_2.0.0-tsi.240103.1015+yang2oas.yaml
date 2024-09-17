@@ -6659,8 +6659,8 @@ paths:
         "400":
           description: Internal Error
           content: {}
-  ? /config/control-construct/equipment/{uuid}/expected-equipment/{local_id}/manufactured-thing/operator-augmented-equipment-instance/
-  : get:
+  /config/control-construct/equipment/{uuid}/expected-equipment/{local_id}/manufactured-thing/operator-augmented-equipment-instance/:
+    get:
       tags:
       - equipment
       summary: Retrieve operator-augmented-equipment-instance
@@ -11325,8 +11325,8 @@ paths:
         "400":
           description: Internal Error
           content: {}
-  ? /config/control-construct/logical-termination-point/{uuid}/layer-protocol/{local_id}/pure-ethernet-structure-pac/pure-ethernet-structure-configuration/g-826-threshold-cross-alarm-list/
-  : get:
+  /config/control-construct/logical-termination-point/{uuid}/layer-protocol/{local_id}/pure-ethernet-structure-pac/pure-ethernet-structure-configuration/g-826-threshold-cross-alarm-list/:
+    get:
       tags:
       - logical-termination-point
       summary: Retrieve g-826-threshold-cross-alarm-list
@@ -11359,8 +11359,8 @@ paths:
         "400":
           description: Internal Error
           content: {}
-  ? /config/control-construct/logical-termination-point/{uuid}/layer-protocol/{local_id}/pure-ethernet-structure-pac/pure-ethernet-structure-configuration/g-826-threshold-cross-alarm-list/{g_826_value_kind_granularity_period}/
-  : get:
+  /config/control-construct/logical-termination-point/{uuid}/layer-protocol/{local_id}/pure-ethernet-structure-pac/pure-ethernet-structure-configuration/g-826-threshold-cross-alarm-list/{g_826_value_kind_granularity_period}/:
+    get:
       tags:
       - logical-termination-point
       summary: Retrieve g-826-threshold-cross-alarm-list by ID
@@ -11537,8 +11537,8 @@ paths:
         "400":
           description: Internal Error
           content: {}
-  ? /config/control-construct/logical-termination-point/{uuid}/layer-protocol/{local_id}/pure-ethernet-structure-pac/pure-ethernet-structure-status/segment-status-list/
-  : get:
+  /config/control-construct/logical-termination-point/{uuid}/layer-protocol/{local_id}/pure-ethernet-structure-pac/pure-ethernet-structure-status/segment-status-list/:
+    get:
       tags:
       - logical-termination-point
       summary: Retrieve segment-status-list
@@ -11570,8 +11570,8 @@ paths:
         "400":
           description: Internal Error
           content: {}
-  ? /config/control-construct/logical-termination-point/{uuid}/layer-protocol/{local_id}/pure-ethernet-structure-pac/pure-ethernet-structure-status/segment-status-list/{segment_status_type_id}/
-  : get:
+  /config/control-construct/logical-termination-point/{uuid}/layer-protocol/{local_id}/pure-ethernet-structure-pac/pure-ethernet-structure-status/segment-status-list/{segment_status_type_id}/:
+    get:
       tags:
       - logical-termination-point
       summary: Retrieve segment-status-list by ID
@@ -11636,8 +11636,8 @@ paths:
         "400":
           description: Internal Error
           content: {}
-  ? /config/control-construct/logical-termination-point/{uuid}/layer-protocol/{local_id}/pure-ethernet-structure-pac/pure-ethernet-structure-current-performance/current-performance-data-list/
-  : get:
+  /config/control-construct/logical-termination-point/{uuid}/layer-protocol/{local_id}/pure-ethernet-structure-pac/pure-ethernet-structure-current-performance/current-performance-data-list/:
+    get:
       tags:
       - logical-termination-point
       summary: Retrieve current-performance-data-list
@@ -11669,8 +11669,8 @@ paths:
         "400":
           description: Internal Error
           content: {}
-  ? /config/control-construct/logical-termination-point/{uuid}/layer-protocol/{local_id}/pure-ethernet-structure-pac/pure-ethernet-structure-current-performance/current-performance-data-list/{granularity_period}/
-  : get:
+  /config/control-construct/logical-termination-point/{uuid}/layer-protocol/{local_id}/pure-ethernet-structure-pac/pure-ethernet-structure-current-performance/current-performance-data-list/{granularity_period}/:
+    get:
       tags:
       - logical-termination-point
       summary: Retrieve current-performance-data-list by ID
@@ -11705,8 +11705,8 @@ paths:
         "400":
           description: Internal Error
           content: {}
-  ? /config/control-construct/logical-termination-point/{uuid}/layer-protocol/{local_id}/pure-ethernet-structure-pac/pure-ethernet-structure-current-performance/current-performance-data-list/{granularity_period}/performance-data/
-  : get:
+  /config/control-construct/logical-termination-point/{uuid}/layer-protocol/{local_id}/pure-ethernet-structure-pac/pure-ethernet-structure-current-performance/current-performance-data-list/{granularity_period}/performance-data/:
+    get:
       tags:
       - logical-termination-point
       summary: Retrieve performance-data
@@ -11771,8 +11771,8 @@ paths:
         "400":
           description: Internal Error
           content: {}
-  ? /config/control-construct/logical-termination-point/{uuid}/layer-protocol/{local_id}/pure-ethernet-structure-pac/pure-ethernet-structure-historical-performances/historical-performance-data-list/
-  : get:
+  /config/control-construct/logical-termination-point/{uuid}/layer-protocol/{local_id}/pure-ethernet-structure-pac/pure-ethernet-structure-historical-performances/historical-performance-data-list/:
+    get:
       tags:
       - logical-termination-point
       summary: Retrieve historical-performance-data-list
@@ -11805,8 +11805,8 @@ paths:
         "400":
           description: Internal Error
           content: {}
-  ? /config/control-construct/logical-termination-point/{uuid}/layer-protocol/{local_id}/pure-ethernet-structure-pac/pure-ethernet-structure-historical-performances/historical-performance-data-list/{granularity_period_period_end_time}/
-  : get:
+  /config/control-construct/logical-termination-point/{uuid}/layer-protocol/{local_id}/pure-ethernet-structure-pac/pure-ethernet-structure-historical-performances/historical-performance-data-list/{granularity_period_period_end_time}/:
+    get:
       tags:
       - logical-termination-point
       summary: Retrieve historical-performance-data-list by ID
@@ -11841,8 +11841,8 @@ paths:
         "400":
           description: Internal Error
           content: {}
-  ? /config/control-construct/logical-termination-point/{uuid}/layer-protocol/{local_id}/pure-ethernet-structure-pac/pure-ethernet-structure-historical-performances/historical-performance-data-list/{granularity_period_period_end_time}/performance-data/
-  : get:
+  /config/control-construct/logical-termination-point/{uuid}/layer-protocol/{local_id}/pure-ethernet-structure-pac/pure-ethernet-structure-historical-performances/historical-performance-data-list/{granularity_period_period_end_time}/performance-data/:
+    get:
       tags:
       - logical-termination-point
       summary: Retrieve performance-data
