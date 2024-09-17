@@ -18,22 +18,22 @@ Technology specific interface definition for a pure Ethernet structure on a phys
 - When statement in Augmentation statement demands for LayerProtocol::layerProtocolName==LAYER_PROTOCOL_NAME_TYPE_PURE_ETHERNET_STRUCTURE_LAYER
 
 ### YANG File
-- [PureEthernetStructure_2.0.0-tsi.240103.1015+yang.1](./PureEthernetStructure_2.0.0-tsi.240103.1015+yang.1.zip)
+- [PureEthernetStructure_2.0.0-tsi.240103.1015+yang.1](./PES_2.0.0-tsi.240103.1015+yang/pure-ethernet-structure-2-0.yang)
 
-### JSON Schema
-- to be provided
+### Schema
+- [PureEthernetStructure_2.0.0-tsi.240103.1015+schema](./PES_2.0.0-tsi.240103.1015+schema/)
 
 ### Interface Simulator
-- to be provided
+- [PureEthernetStructure_2.0.0-tsi.240103.1015+simulator](./PES_2.0.0-tsi.240103.1015+simu/)
 
 ### Interface Validator
-- [PureEthernetStructure_2.0.0-tsi.240103.1015+validator.1](./PureEthernetStructure_2.0.0-tsi.240103.1015+validator.1.zip)
+- [PureEthernetStructure_2.0.0-tsi.240103.1015+validator](./PES_2.0.0-tsi.240103.1015+vali/)
 
 ### Publication
-- Candidate for ONF TR-532 v2.0 
+- Published as a part of ONF TR-532 v2.0  
 
-### Aspired Model Classification
-- Live Network
+### Model Classification
+- Operational in Live Network
 
 ### Open Issue List
 - [pureEthernetStructure/issues](../../issues)

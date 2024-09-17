@@ -1,0 +1,1407 @@
+openapi: 3.0.1
+info:
+  title: PureEthernetStructure_2.0.0-tsi.240103.1015+simulator.completeness
+  version: 2.0.0
+
+paths:
+########################################################################################################################
+#   PureEthernetStructure_2.0.0-tsi.240103.1015+simulator.completeness in static reference mode
+########################################################################################################################
+#
+# At Application
+# ==============
+#
+# Preparation => MountName=305250001, UUID=pureEtherStruc1, LocalID=1
+  /core-model-1-4:network-control-domain=cache/control-construct=305250001:
+    parameters:
+      - $ref: '#/components/parameters/user'
+      - $ref: '#/components/parameters/originator'
+      - $ref: '#/components/parameters/x-correlator'
+      - $ref: '#/components/parameters/trace-indicator'
+      - $ref: '#/components/parameters/customer-journey'
+      - $ref: '#/components/parameters/mountName'
+      - $ref: '#/components/parameters/fields'
+    get:
+      operationId: getLtpList
+      summary: 'Provides list of LTPs from cache'
+      tags:
+        - IndividualServices
+      security:
+        - apiKeyAuth: []
+      responses:
+        '200':
+          description: 'List of LTPs provided from cache'
+          content:
+            application/json:
+              schema:
+                type: object
+                required:
+                  - core-model-1-4:control-construct
+                properties:
+                  core-model-1-4:control-construct:
+                    type: array
+                    items:
+                      type: object
+                      required:
+                        - logical-termination-point
+                      properties:
+                        logical-termination-point:
+                          type: array
+                          items:
+                            type: object
+                            required:
+                              - uuid
+                              - layer-protocol
+                            properties:
+                              uuid:
+                                type: string
+                                enum:
+                                  - 'pureEtherStruc1'
+                              layer-protocol:
+                                type: array
+                                items:
+                                  type: object
+                                  required:
+                                    - local-id
+                                    - layer-protocol-name
+                                  properties:
+                                    local-id:
+                                      type: string
+                                      enum:
+                                        - '1'
+                                    layer-protocol-name:
+                                      type: string
+                                      enum:
+                                        - 'pure-ethernet-structure-2-0:LAYER_PROTOCOL_NAME_TYPE_PURE_ETHERNET_STRUCTURE_LAYER'
+                example:
+                  core-model-1-4:control-construct:
+                    - logical-termination-point:
+                        - uuid: 'pureEtherStruc1'
+                          layer-protocol:
+                            - local-id: '1'
+                              layer-protocol-name: 'pure-ethernet-structure-2-0:LAYER_PROTOCOL_NAME_TYPE_PURE_ETHERNET_STRUCTURE_LAYER'
+          headers:
+            x-correlator:
+              $ref: '#/components/headers/x-correlator'
+            exec-time:
+              $ref: '#/components/headers/exec-time'
+            backend-time:
+              $ref: '#/components/headers/backend-time'
+            life-cycle-state:
+              $ref: '#/components/headers/life-cycle-state'
+  
+# Completeness of GET 200
+  /core-model-1-4:network-control-domain=cache/control-construct=305250001/logical-termination-point=pureEtherStruc1/layer-protocol=1/pure-ethernet-structure-2-0:pure-ethernet-structure-pac/pure-ethernet-structure-capability:
+    parameters:
+      - $ref: '#/components/parameters/user'
+      - $ref: '#/components/parameters/originator'
+      - $ref: '#/components/parameters/x-correlator'
+      - $ref: '#/components/parameters/trace-indicator'
+      - $ref: '#/components/parameters/customer-journey'
+      - $ref: '#/components/parameters/mountName'
+      - $ref: '#/components/parameters/uuid'
+      - $ref: '#/components/parameters/localId'
+      - $ref: '#/components/parameters/fields'
+    get:
+      operationId: getCachedPureEthernetStructureCapability
+      summary: 'Provides PureEthernetStructureCapability from cache'
+      tags:
+        - IndividualServices
+      security:
+        - apiKeyAuth: []
+      responses:
+        '200':
+          description: 'PureEthernetStructureCapability provided from cache'
+          content:
+            application/json:
+              schema:
+                type: object
+                required:
+                  - pure-ethernet-structure-2-0:pure-ethernet-structure-capability
+                properties:
+                  pure-ethernet-structure-2-0:pure-ethernet-structure-capability:
+                    $ref: '#/components/schemas/pure-ethernet-structure-capability'
+                example:
+                  pure-ethernet-structure-2-0:pure-ethernet-structure-capability:
+                    performance-monitoring-is-avail: true
+          headers:
+            x-correlator:
+              $ref: '#/components/headers/x-correlator'
+            exec-time:
+              $ref: '#/components/headers/exec-time'
+            backend-time:
+              $ref: '#/components/headers/backend-time'
+            life-cycle-state:
+              $ref: '#/components/headers/life-cycle-state'
+  /core-model-1-4:network-control-domain=cache/control-construct=305250001/logical-termination-point=pureEtherStruc1/layer-protocol=1/pure-ethernet-structure-2-0:pure-ethernet-structure-pac/pure-ethernet-structure-configuration:
+    parameters:
+      - $ref: '#/components/parameters/user'
+      - $ref: '#/components/parameters/originator'
+      - $ref: '#/components/parameters/x-correlator'
+      - $ref: '#/components/parameters/trace-indicator'
+      - $ref: '#/components/parameters/customer-journey'
+      - $ref: '#/components/parameters/mountName'
+      - $ref: '#/components/parameters/uuid'
+      - $ref: '#/components/parameters/localId'
+      - $ref: '#/components/parameters/fields'
+    get:
+      operationId: getCachedPureEthernetStructureConfiguration
+      summary: 'Provides PureEthernetStructureConfiguration from cache'
+      tags:
+        - IndividualServices
+      security:
+        - apiKeyAuth: []
+      responses:
+        '200':
+          description: 'PureEthernetStructureConfiguration provided from cache'
+          content:
+            application/json:
+              schema:
+                type: object
+                required:
+                  - pure-ethernet-structure-2-0:pure-ethernet-structure-configuration
+                properties:
+                  pure-ethernet-structure-2-0:pure-ethernet-structure-configuration:
+                    $ref: '#/components/schemas/pure-ethernet-structure-configuration'
+                example:
+                  pure-ethernet-structure-2-0:pure-ethernet-structure-configuration:
+                    g-826-threshold-cross-alarm-list:
+                      - g-826-value-kind: 'pure-ethernet-structure-2-0:G_826_TYPE_ES'
+                        alarm-raising-threshold: 180
+                        alarm-clearing-threshold: 10
+                        granularity-period: 'pure-ethernet-structure-2-0:GRANULARITY_PERIOD_TYPE_PERIOD-15-MIN'
+                      - g-826-value-kind: 'pure-ethernet-structure-2-0:G_826_TYPE_SES'
+                        alarm-raising-threshold: 15
+                        alarm-clearing-threshold: 1
+                        granularity-period: 'pure-ethernet-structure-2-0:GRANULARITY_PERIOD_TYPE_PERIOD-15-MIN'
+                    performance-monitoring-is-on: true
+          headers:
+            x-correlator:
+              $ref: '#/components/headers/x-correlator'
+            exec-time:
+              $ref: '#/components/headers/exec-time'
+            backend-time:
+              $ref: '#/components/headers/backend-time'
+            life-cycle-state:
+              $ref: '#/components/headers/life-cycle-state'
+  /core-model-1-4:network-control-domain=cache/control-construct=305250001/logical-termination-point=pureEtherStruc1/layer-protocol=1/pure-ethernet-structure-2-0:pure-ethernet-structure-pac/pure-ethernet-structure-status:
+    parameters:
+      - $ref: '#/components/parameters/user'
+      - $ref: '#/components/parameters/originator'
+      - $ref: '#/components/parameters/x-correlator'
+      - $ref: '#/components/parameters/trace-indicator'
+      - $ref: '#/components/parameters/customer-journey'
+      - $ref: '#/components/parameters/mountName'
+      - $ref: '#/components/parameters/uuid'
+      - $ref: '#/components/parameters/localId'
+      - $ref: '#/components/parameters/fields'
+    get:
+      operationId: getCachedPureEthernetStructureStatus
+      summary: 'Provides PureEthernetStructureStatus from cache'
+      tags:
+        - IndividualServices
+      security:
+        - apiKeyAuth: []
+      responses:
+        '200':
+          description: 'PureEthernetStructureStatus provided from cache'
+          content:
+            application/json:
+              schema:
+                type: object
+                required:
+                  - pure-ethernet-structure-2-0:pure-ethernet-structure-status
+                properties:
+                  pure-ethernet-structure-2-0:pure-ethernet-structure-status:
+                    $ref: '#/components/schemas/pure-ethernet-structure-status'
+                example:
+                  pure-ethernet-structure-2-0:pure-ethernet-structure-status:
+                    segment-status-list:
+                      - segment-status-type-id: 0
+                        operational-status: 'pure-ethernet-structure-2-0:OPERATIONAL_STATE_TYPE_ENABLED'
+                    performance-monitoring-is-up: true
+          headers:
+            x-correlator:
+              $ref: '#/components/headers/x-correlator'
+            exec-time:
+              $ref: '#/components/headers/exec-time'
+            backend-time:
+              $ref: '#/components/headers/backend-time'
+            life-cycle-state:
+              $ref: '#/components/headers/life-cycle-state'
+  /core-model-1-4:network-control-domain=cache/control-construct=305250001/logical-termination-point=pureEtherStruc1/layer-protocol=1/pure-ethernet-structure-2-0:pure-ethernet-structure-pac/pure-ethernet-structure-current-performance:
+    parameters:
+      - $ref: '#/components/parameters/user'
+      - $ref: '#/components/parameters/originator'
+      - $ref: '#/components/parameters/x-correlator'
+      - $ref: '#/components/parameters/trace-indicator'
+      - $ref: '#/components/parameters/customer-journey'
+      - $ref: '#/components/parameters/mountName'
+      - $ref: '#/components/parameters/uuid'
+      - $ref: '#/components/parameters/localId'
+      - $ref: '#/components/parameters/fields'
+    get:
+      operationId: getCachedPureEthernetStructureCurrentPerformance
+      summary: 'Provides PureEthernetStructureCurrentPerformance from cache'
+      tags:
+        - IndividualServices
+      security:
+        - apiKeyAuth: []
+      responses:
+        '200':
+          description: 'PureEthernetStructureCurrentPerformance provided from cache'
+          content:
+            application/json:
+              schema:
+                type: object
+                required:
+                  - pure-ethernet-structure-2-0:pure-ethernet-structure-current-performance
+                properties:
+                  pure-ethernet-structure-2-0:pure-ethernet-structure-current-performance:
+                    $ref: '#/components/schemas/pure-ethernet-structure-current-performance'
+                example:
+                  pure-ethernet-structure-2-0:pure-ethernet-structure-current-performance:
+                    number-of-current-performance-sets: 1
+                    current-performance-data-list:
+                      - timestamp: '2010-11-20T14:00:00+01:00'
+                        suspect-interval-flag: true
+                        elapsed-time: '726'
+                        scanner-id: 'string'
+                        granularity-period: 'pure-ethernet-structure-2-0:GRANULARITY_PERIOD_TYPE_PERIOD-15-MIN'
+                        performance-data:
+                          time-period: 726
+                          es: 140
+                          ses: 10
+                          cses: 5
+                          unavailability: 5
+                          rx-level-min: -91
+                          rx-level-max: -68
+                          rx-level-avg: -74
+          headers:
+            x-correlator:
+              $ref: '#/components/headers/x-correlator'
+            exec-time:
+              $ref: '#/components/headers/exec-time'
+            backend-time:
+              $ref: '#/components/headers/backend-time'
+            life-cycle-state:
+              $ref: '#/components/headers/life-cycle-state'
+  /core-model-1-4:network-control-domain=cache/control-construct=305250001/logical-termination-point=pureEtherStruc1/layer-protocol=1/pure-ethernet-structure-2-0:pure-ethernet-structure-pac/pure-ethernet-structure-historical-performances:
+    parameters:
+      - $ref: '#/components/parameters/user'
+      - $ref: '#/components/parameters/originator'
+      - $ref: '#/components/parameters/x-correlator'
+      - $ref: '#/components/parameters/trace-indicator'
+      - $ref: '#/components/parameters/customer-journey'
+      - $ref: '#/components/parameters/mountName'
+      - $ref: '#/components/parameters/uuid'
+      - $ref: '#/components/parameters/localId'
+      - $ref: '#/components/parameters/fields'
+    get:
+      operationId: getCachedPureEthernetStructureHistoricalPerformances
+      summary: 'Provides PureEthernetStructureHistoricalPerformances from cache'
+      tags:
+        - IndividualServices
+      security:
+        - apiKeyAuth: []
+      responses:
+        '200':
+          description: 'PureEthernetStructureHistoricalPerformances provided from cache'
+          content:
+            application/json:
+              schema:
+                type: object
+                required:
+                  - pure-ethernet-structure-2-0:pure-ethernet-structure-historical-performances
+                properties:
+                  pure-ethernet-structure-2-0:pure-ethernet-structure-historical-performances:
+                    $ref: '#/components/schemas/pure-ethernet-structure-historical-performances'
+                example:
+                  pure-ethernet-structure-2-0:pure-ethernet-structure-historical-performances:
+                    number-of-historical-performance-sets: 1
+                    time-of-latest-change: '2010-11-20T14:00:00+01:00'
+                    historical-performance-data-list:
+                      - suspect-interval-flag: false
+                        history-data-id: 'History Data ID not defined.'
+                        granularity-period: 'pure-ethernet-structure-2-0:GRANULARITY_PERIOD_TYPE_PERIOD-15-MIN'
+                        period-end-time: '2010-11-20T14:00:00+01:00'
+                        performance-data:
+                          time-period: 900
+                          es: 140
+                          ses: 10
+                          cses: 5
+                          unavailability: 5
+                          rx-level-min: -91
+                          rx-level-max: -68
+                          rx-level-avg: -72
+          headers:
+            x-correlator:
+              $ref: '#/components/headers/x-correlator'
+            exec-time:
+              $ref: '#/components/headers/exec-time'
+            backend-time:
+              $ref: '#/components/headers/backend-time'
+            life-cycle-state:
+              $ref: '#/components/headers/life-cycle-state'
+
+# Completeness of RPC
+  # /core-model-1-4:network-control-domain=live/control-construct=305250001/pure-ethernet-structure-2-0:clear-threshold-cross-alarms
+  /core-model-1-4:network-control-domain=live/control-construct=305250001/pure-ethernet-structure-2-0%3Aclear-threshold-cross-alarms:
+    parameters:
+      - $ref: '#/components/parameters/user'
+      - $ref: '#/components/parameters/originator'
+      - $ref: '#/components/parameters/x-correlator'
+      - $ref: '#/components/parameters/trace-indicator'
+      - $ref: '#/components/parameters/customer-journey'
+      - $ref: '#/components/parameters/mountName'
+    post:
+      operationId: postClearThresholdCrossAlarms
+      summary: 'Clears all currently active threshold cross alarms at the referenced PureEthernetStructure'
+      tags:
+        - IndividualServices
+      security:
+        - apiKeyAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - input
+              properties:
+                input:
+                  type: object
+                  required:
+                    - affected-pure-ethernet-structure
+                  properties:
+                    affected-pure-ethernet-structure:
+                      type: string
+      responses:
+        '204':
+          description: 'Threshold cross alarms cleared'
+          headers:
+            x-correlator:
+              $ref: '#/components/headers/x-correlator'
+            exec-time:
+              $ref: '#/components/headers/exec-time'
+            backend-time:
+              $ref: '#/components/headers/backend-time'
+            life-cycle-state:
+              $ref: '#/components/headers/life-cycle-state'
+
+
+#
+# At Controller (copy from above, different paths, less parameters, basicAuth, no headers)
+# =============
+#
+# Preparation => MountName=305250001, UUID=pureEtherStruc1, LocalID=1
+  /rests/data/network-topology:network-topology/topology=topology-netconf/node=305250001/yang-ext:mount/core-model-1-4:control-construct:
+    parameters:
+      - $ref: '#/components/parameters/mountName'
+    get:
+      operationId: getLtpList
+      summary: 'Provides list of LTPs from device'
+      tags:
+        - IndividualServices
+      security:
+        - basicAuth: []
+      responses:
+        '200':
+          description: 'List of LTPs provided from device'
+          content:
+            application/json:
+              schema:
+                type: object
+                required:
+                  - core-model-1-4:control-construct
+                properties:
+                  core-model-1-4:control-construct:
+                    type: object
+                    required:
+                      - logical-termination-point
+                    properties:
+                      logical-termination-point:
+                        type: array
+                        items:
+                          type: object
+                          required:
+                            - uuid
+                            - layer-protocol
+                          properties:
+                            uuid:
+                              type: string
+                              enum:
+                                - 'pureEtherStruc1'
+                            layer-protocol:
+                              type: array
+                              items:
+                                type: object
+                                required:
+                                  - local-id
+                                  - layer-protocol-name
+                                properties:
+                                  local-id:
+                                    type: string
+                                    enum:
+                                      - '1'
+                                  layer-protocol-name:
+                                    type: string
+                                    enum:
+                                      - 'pure-ethernet-structure-2-0:LAYER_PROTOCOL_NAME_TYPE_PURE_ETHERNET_STRUCTURE_LAYER'
+                example:
+                  core-model-1-4:control-construct:
+                    logical-termination-point:
+                      - uuid: 'pureEtherStruc1'
+                        layer-protocol:
+                          - local-id: '1'
+                            layer-protocol-name: 'pure-ethernet-structure-2-0:LAYER_PROTOCOL_NAME_TYPE_PURE_ETHERNET_STRUCTURE_LAYER'
+
+# Completeness of GET 200
+  /rests/data/network-topology:network-topology/topology=topology-netconf/node=305250001/yang-ext:mount/core-model-1-4:control-construct/logical-termination-point=pureEtherStruc1/layer-protocol=1/pure-ethernet-structure-2-0:pure-ethernet-structure-pac/pure-ethernet-structure-capability:
+    parameters:
+      - $ref: '#/components/parameters/mountName'
+      - $ref: '#/components/parameters/uuid'
+      - $ref: '#/components/parameters/localId'
+      - $ref: '#/components/parameters/fields'
+    get:
+      operationId: getCachedPureEthernetStructureCapability
+      summary: 'Provides PureEthernetStructureCapability from device'
+      tags:
+        - IndividualServices
+      security:
+        - basicAuth: []
+      responses:
+        '200':
+          description: 'PureEthernetStructureCapability provided from device'
+          content:
+            application/json:
+              schema:
+                type: object
+                required:
+                  - pure-ethernet-structure-2-0:pure-ethernet-structure-capability
+                properties:
+                  pure-ethernet-structure-2-0:pure-ethernet-structure-capability:
+                    $ref: '#/components/schemas/pure-ethernet-structure-capability'
+                example:
+                  pure-ethernet-structure-2-0:pure-ethernet-structure-capability:
+                    performance-monitoring-is-avail: true
+  /rests/data/network-topology:network-topology/topology=topology-netconf/node=305250001/yang-ext:mount/core-model-1-4:control-construct/logical-termination-point=pureEtherStruc1/layer-protocol=1/pure-ethernet-structure-2-0:pure-ethernet-structure-pac/pure-ethernet-structure-configuration:
+    parameters:
+      - $ref: '#/components/parameters/mountName'
+      - $ref: '#/components/parameters/uuid'
+      - $ref: '#/components/parameters/localId'
+      - $ref: '#/components/parameters/fields'
+    get:
+      operationId: getCachedPureEthernetStructureConfiguration
+      summary: 'Provides PureEthernetStructureConfiguration from device'
+      tags:
+        - IndividualServices
+      security:
+        - basicAuth: []
+      responses:
+        '200':
+          description: 'PureEthernetStructureConfiguration provided from device'
+          content:
+            application/json:
+              schema:
+                type: object
+                required:
+                  - pure-ethernet-structure-2-0:pure-ethernet-structure-configuration
+                properties:
+                  pure-ethernet-structure-2-0:pure-ethernet-structure-configuration:
+                    $ref: '#/components/schemas/pure-ethernet-structure-configuration'
+                example:
+                  pure-ethernet-structure-2-0:pure-ethernet-structure-configuration:
+                    g-826-threshold-cross-alarm-list:
+                      - g-826-value-kind: 'pure-ethernet-structure-2-0:G_826_TYPE_ES'
+                        alarm-raising-threshold: 180
+                        alarm-clearing-threshold: 10
+                        granularity-period: 'pure-ethernet-structure-2-0:GRANULARITY_PERIOD_TYPE_PERIOD-15-MIN'
+                      - g-826-value-kind: 'pure-ethernet-structure-2-0:G_826_TYPE_SES'
+                        alarm-raising-threshold: 15
+                        alarm-clearing-threshold: 1
+                        granularity-period: 'pure-ethernet-structure-2-0:GRANULARITY_PERIOD_TYPE_PERIOD-15-MIN'
+                    performance-monitoring-is-on: true
+  /rests/data/network-topology:network-topology/topology=topology-netconf/node=305250001/yang-ext:mount/core-model-1-4:control-construct/logical-termination-point=pureEtherStruc1/layer-protocol=1/pure-ethernet-structure-2-0:pure-ethernet-structure-pac/pure-ethernet-structure-status:
+    parameters:
+      - $ref: '#/components/parameters/mountName'
+      - $ref: '#/components/parameters/uuid'
+      - $ref: '#/components/parameters/localId'
+      - $ref: '#/components/parameters/fields'
+    get:
+      operationId: getCachedPureEthernetStructureStatus
+      summary: 'Provides PureEthernetStructureStatus from device'
+      tags:
+        - IndividualServices
+      security:
+        - basicAuth: []
+      responses:
+        '200':
+          description: 'PureEthernetStructureStatus provided from device'
+          content:
+            application/json:
+              schema:
+                type: object
+                required:
+                  - pure-ethernet-structure-2-0:pure-ethernet-structure-status
+                properties:
+                  pure-ethernet-structure-2-0:pure-ethernet-structure-status:
+                    $ref: '#/components/schemas/pure-ethernet-structure-status'
+                example:
+                  pure-ethernet-structure-2-0:pure-ethernet-structure-status:
+                    segment-status-list:
+                      - segment-status-type-id: 0
+                        operational-status: 'pure-ethernet-structure-2-0:OPERATIONAL_STATE_TYPE_ENABLED'
+                    performance-monitoring-is-up: true
+  /rests/data/network-topology:network-topology/topology=topology-netconf/node=305250001/yang-ext:mount/core-model-1-4:control-construct/logical-termination-point=pureEtherStruc1/layer-protocol=1/pure-ethernet-structure-2-0:pure-ethernet-structure-pac/pure-ethernet-structure-current-performance:
+    parameters:
+      - $ref: '#/components/parameters/mountName'
+      - $ref: '#/components/parameters/uuid'
+      - $ref: '#/components/parameters/localId'
+      - $ref: '#/components/parameters/fields'
+    get:
+      operationId: getCachedPureEthernetStructureCurrentPerformance
+      summary: 'Provides PureEthernetStructureCurrentPerformance from device'
+      tags:
+        - IndividualServices
+      security:
+        - basicAuth: []
+      responses:
+        '200':
+          description: 'PureEthernetStructureCurrentPerformance provided from device'
+          content:
+            application/json:
+              schema:
+                type: object
+                required:
+                  - pure-ethernet-structure-2-0:pure-ethernet-structure-current-performance
+                properties:
+                  pure-ethernet-structure-2-0:pure-ethernet-structure-current-performance:
+                    $ref: '#/components/schemas/pure-ethernet-structure-current-performance'
+                example:
+                  pure-ethernet-structure-2-0:pure-ethernet-structure-current-performance:
+                    number-of-current-performance-sets: 1
+                    current-performance-data-list:
+                      - timestamp: '2010-11-20T14:00:00+01:00'
+                        suspect-interval-flag: true
+                        elapsed-time: '726'
+                        scanner-id: 'string'
+                        granularity-period: 'pure-ethernet-structure-2-0:GRANULARITY_PERIOD_TYPE_PERIOD-15-MIN'
+                        performance-data:
+                          time-period: 726
+                          es: 140
+                          ses: 10
+                          cses: 5
+                          unavailability: 5
+                          rx-level-min: -91
+                          rx-level-max: -68
+                          rx-level-avg: -74
+  /rests/data/network-topology:network-topology/topology=topology-netconf/node=305250001/yang-ext:mount/core-model-1-4:control-construct/logical-termination-point=pureEtherStruc1/layer-protocol=1/pure-ethernet-structure-2-0:pure-ethernet-structure-pac/pure-ethernet-structure-historical-performances:
+    parameters:
+      - $ref: '#/components/parameters/mountName'
+      - $ref: '#/components/parameters/uuid'
+      - $ref: '#/components/parameters/localId'
+      - $ref: '#/components/parameters/fields'
+    get:
+      operationId: getCachedPureEthernetStructureHistoricalPerformances
+      summary: 'Provides PureEthernetStructureHistoricalPerformances from device'
+      tags:
+        - IndividualServices
+      security:
+        - basicAuth: []
+      responses:
+        '200':
+          description: 'PureEthernetStructureHistoricalPerformances provided from device'
+          content:
+            application/json:
+              schema:
+                type: object
+                required:
+                  - pure-ethernet-structure-2-0:pure-ethernet-structure-historical-performances
+                properties:
+                  pure-ethernet-structure-2-0:pure-ethernet-structure-historical-performances:
+                    $ref: '#/components/schemas/pure-ethernet-structure-historical-performances'
+                example:
+                  pure-ethernet-structure-2-0:pure-ethernet-structure-historical-performances:
+                    number-of-historical-performance-sets: 1
+                    time-of-latest-change: '2010-11-20T14:00:00+01:00'
+                    historical-performance-data-list:
+                      - suspect-interval-flag: false
+                        history-data-id: 'History Data ID not defined.'
+                        granularity-period: 'pure-ethernet-structure-2-0:GRANULARITY_PERIOD_TYPE_PERIOD-15-MIN'
+                        period-end-time: '2010-11-20T14:00:00+01:00'
+                        performance-data:
+                          time-period: 900
+                          es: 140
+                          ses: 10
+                          cses: 5
+                          unavailability: 5
+                          rx-level-min: -91
+                          rx-level-max: -68
+                          rx-level-avg: -72
+
+# Completeness of RPC
+  # /rests/operations/network-topology:network-topology/topology=topology-netconf/node=305250001/yang-ext:mount/pure-ethernet-structure-2-0:clear-threshold-cross-alarms
+  /rests/operations/network-topology:network-topology/topology=topology-netconf/node=305250001/yang-ext:mount/pure-ethernet-structure-2-0%3Aclear-threshold-cross-alarms:
+    parameters:
+      - $ref: '#/components/parameters/mountName'
+    post:
+      operationId: postClearThresholdCrossAlarms
+      summary: 'Clears all currently active threshold cross alarms at the referenced PureEthernetStructure'
+      tags:
+        - IndividualServices
+      security:
+        - basicAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - input
+              properties:
+                input:
+                  type: object
+                  required:
+                    - affected-pure-ethernet-structure
+                  properties:
+                    affected-pure-ethernet-structure:
+                      type: string
+      responses:
+        '204':
+          description: 'Threshold cross alarms cleared'
+
+
+########################################################################################################################
+#   Generic Paths
+########################################################################################################################
+  /generic/core-model-1-4:network-control-domain=cache/control-construct={mountName}/logical-termination-point={uuid}/layer-protocol={localId}/pure-ethernet-structure-2-0:pure-ethernet-structure-pac/pure-ethernet-structure-capability:
+    parameters:
+      - $ref: '#/components/parameters/user'
+      - $ref: '#/components/parameters/originator'
+      - $ref: '#/components/parameters/x-correlator'
+      - $ref: '#/components/parameters/trace-indicator'
+      - $ref: '#/components/parameters/customer-journey'
+      - $ref: '#/components/parameters/mountName'
+      - $ref: '#/components/parameters/uuid'
+      - $ref: '#/components/parameters/localId'
+      - $ref: '#/components/parameters/fields'
+    get:
+      operationId: getCachedPureEthernetStructureCapability
+      summary: 'Provides PureEthernetStructureCapability from cache'
+      tags:
+        - IndividualServices
+      security:
+        - apiKeyAuth: []
+      responses:
+        '200':
+          description: 'PureEthernetStructureCapability provided from cache'
+          content:
+            application/json:
+              schema:
+                type: object
+                required:
+                  - pure-ethernet-structure-2-0:pure-ethernet-structure-capability
+                properties:
+                  pure-ethernet-structure-2-0:pure-ethernet-structure-capability:
+                    $ref: '#/components/schemas/pure-ethernet-structure-capability'
+                example:
+                  pure-ethernet-structure-2-0:pure-ethernet-structure-capability:
+                    performance-monitoring-is-avail: true
+          headers:
+            x-correlator:
+              $ref: '#/components/headers/x-correlator'
+            exec-time:
+              $ref: '#/components/headers/exec-time'
+            backend-time:
+              $ref: '#/components/headers/backend-time'
+            life-cycle-state:
+              $ref: '#/components/headers/life-cycle-state'
+        '4XX':
+          $ref: '#/components/responses/responseForErroredServiceRequests'
+        '500':
+          $ref: '#/components/responses/responseForErroredServiceRequests'
+        default:
+          $ref: '#/components/responses/responseForErroredServiceRequests'
+  /generic/core-model-1-4:network-control-domain=cache/control-construct={mountName}/logical-termination-point={uuid}/layer-protocol={localId}/pure-ethernet-structure-2-0:pure-ethernet-structure-pac/pure-ethernet-structure-configuration:
+    parameters:
+      - $ref: '#/components/parameters/user'
+      - $ref: '#/components/parameters/originator'
+      - $ref: '#/components/parameters/x-correlator'
+      - $ref: '#/components/parameters/trace-indicator'
+      - $ref: '#/components/parameters/customer-journey'
+      - $ref: '#/components/parameters/mountName'
+      - $ref: '#/components/parameters/uuid'
+      - $ref: '#/components/parameters/localId'
+      - $ref: '#/components/parameters/fields'
+    get:
+      operationId: getCachedPureEthernetStructureConfiguration
+      summary: 'Provides PureEthernetStructureConfiguration from cache'
+      tags:
+        - IndividualServices
+      security:
+        - apiKeyAuth: []
+      responses:
+        '200':
+          description: 'PureEthernetStructureConfiguration provided from cache'
+          content:
+            application/json:
+              schema:
+                type: object
+                required:
+                  - pure-ethernet-structure-2-0:pure-ethernet-structure-configuration
+                properties:
+                  pure-ethernet-structure-2-0:pure-ethernet-structure-configuration:
+                    $ref: '#/components/schemas/pure-ethernet-structure-configuration'
+                example:
+                  pure-ethernet-structure-2-0:pure-ethernet-structure-configuration:
+                    g-826-threshold-cross-alarm-list:
+                      - g-826-value-kind: 'pure-ethernet-structure-2-0:G_826_TYPE_ES'
+                        alarm-raising-threshold: 0
+                        alarm-clearing-threshold: 0
+                        granularity-period: 'pure-ethernet-structure-2-0:GRANULARITY_PERIOD_TYPE_UNKNOWN'
+                    performance-monitoring-is-on: true
+          headers:
+            x-correlator:
+              $ref: '#/components/headers/x-correlator'
+            exec-time:
+              $ref: '#/components/headers/exec-time'
+            backend-time:
+              $ref: '#/components/headers/backend-time'
+            life-cycle-state:
+              $ref: '#/components/headers/life-cycle-state'
+        '4XX':
+          $ref: '#/components/responses/responseForErroredServiceRequests'
+        '500':
+          $ref: '#/components/responses/responseForErroredServiceRequests'
+        default:
+          $ref: '#/components/responses/responseForErroredServiceRequests'
+  /generic/core-model-1-4:network-control-domain=cache/control-construct={mountName}/logical-termination-point={uuid}/layer-protocol={localId}/pure-ethernet-structure-2-0:pure-ethernet-structure-pac/pure-ethernet-structure-status:
+    parameters:
+      - $ref: '#/components/parameters/user'
+      - $ref: '#/components/parameters/originator'
+      - $ref: '#/components/parameters/x-correlator'
+      - $ref: '#/components/parameters/trace-indicator'
+      - $ref: '#/components/parameters/customer-journey'
+      - $ref: '#/components/parameters/mountName'
+      - $ref: '#/components/parameters/uuid'
+      - $ref: '#/components/parameters/localId'
+      - $ref: '#/components/parameters/fields'
+    get:
+      operationId: getCachedPureEthernetStructureStatus
+      summary: 'Provides PureEthernetStructureStatus from cache'
+      tags:
+        - IndividualServices
+      security:
+        - apiKeyAuth: []
+      responses:
+        '200':
+          description: 'PureEthernetStructureStatus provided from cache'
+          content:
+            application/json:
+              schema:
+                type: object
+                required:
+                  - pure-ethernet-structure-2-0:pure-ethernet-structure-status
+                properties:
+                  pure-ethernet-structure-2-0:pure-ethernet-structure-status:
+                    $ref: '#/components/schemas/pure-ethernet-structure-status'
+                example:
+                  pure-ethernet-structure-2-0:pure-ethernet-structure-status:
+                    segment-status-list:
+                      - segment-status-type-id: 0
+                        operational-status: 'pure-ethernet-structure-2-0:OPERATIONAL_STATE_TYPE_ENABLED'
+                    performance-monitoring-is-up: true
+          headers:
+            x-correlator:
+              $ref: '#/components/headers/x-correlator'
+            exec-time:
+              $ref: '#/components/headers/exec-time'
+            backend-time:
+              $ref: '#/components/headers/backend-time'
+            life-cycle-state:
+              $ref: '#/components/headers/life-cycle-state'
+        '4XX':
+          $ref: '#/components/responses/responseForErroredServiceRequests'
+        '500':
+          $ref: '#/components/responses/responseForErroredServiceRequests'
+        default:
+          $ref: '#/components/responses/responseForErroredServiceRequests'
+  /generic/core-model-1-4:network-control-domain=cache/control-construct={mountName}/logical-termination-point={uuid}/layer-protocol={localId}/pure-ethernet-structure-2-0:pure-ethernet-structure-pac/pure-ethernet-structure-current-performance:
+    parameters:
+      - $ref: '#/components/parameters/user'
+      - $ref: '#/components/parameters/originator'
+      - $ref: '#/components/parameters/x-correlator'
+      - $ref: '#/components/parameters/trace-indicator'
+      - $ref: '#/components/parameters/customer-journey'
+      - $ref: '#/components/parameters/mountName'
+      - $ref: '#/components/parameters/uuid'
+      - $ref: '#/components/parameters/localId'
+      - $ref: '#/components/parameters/fields'
+    get:
+      operationId: getCachedPureEthernetStructureCurrentPerformance
+      summary: 'Provides PureEthernetStructureCurrentPerformance from cache'
+      tags:
+        - IndividualServices
+      security:
+        - apiKeyAuth: []
+      responses:
+        '200':
+          description: 'PureEthernetStructureCurrentPerformance provided from cache'
+          content:
+            application/json:
+              schema:
+                type: object
+                required:
+                  - pure-ethernet-structure-2-0:pure-ethernet-structure-current-performance
+                properties:
+                  pure-ethernet-structure-2-0:pure-ethernet-structure-current-performance:
+                    $ref: '#/components/schemas/pure-ethernet-structure-current-performance'
+                example:
+                  pure-ethernet-structure-2-0:pure-ethernet-structure-current-performance:
+                    number-of-current-performance-sets: 0
+                    current-performance-data-list:
+                      - timestamp: '2010-11-20T14:00:00+01:00'
+                        suspect-interval-flag: true
+                        elapsed-time: 'string'
+                        scanner-id: 'string'
+                        granularity-period: 'pure-ethernet-structure-2-0:GRANULARITY_PERIOD_TYPE_UNKNOWN'
+                        performance-data:
+                          time-period: 0
+                          es: 0
+                          ses: 0
+                          cses: 0
+                          unavailability: 0
+                          rx-level-min: 0
+                          rx-level-max: 0
+                          rx-level-avg: 0
+          headers:
+            x-correlator:
+              $ref: '#/components/headers/x-correlator'
+            exec-time:
+              $ref: '#/components/headers/exec-time'
+            backend-time:
+              $ref: '#/components/headers/backend-time'
+            life-cycle-state:
+              $ref: '#/components/headers/life-cycle-state'
+        '4XX':
+          $ref: '#/components/responses/responseForErroredServiceRequests'
+        '500':
+          $ref: '#/components/responses/responseForErroredServiceRequests'
+        default:
+          $ref: '#/components/responses/responseForErroredServiceRequests'
+  /generic/core-model-1-4:network-control-domain=cache/control-construct={mountName}/logical-termination-point={uuid}/layer-protocol={localId}/pure-ethernet-structure-2-0:pure-ethernet-structure-pac/pure-ethernet-structure-historical-performances:
+    parameters:
+      - $ref: '#/components/parameters/user'
+      - $ref: '#/components/parameters/originator'
+      - $ref: '#/components/parameters/x-correlator'
+      - $ref: '#/components/parameters/trace-indicator'
+      - $ref: '#/components/parameters/customer-journey'
+      - $ref: '#/components/parameters/mountName'
+      - $ref: '#/components/parameters/uuid'
+      - $ref: '#/components/parameters/localId'
+      - $ref: '#/components/parameters/fields'
+    get:
+      operationId: getCachedPureEthernetStructureHistoricalPerformances
+      summary: 'Provides PureEthernetStructureHistoricalPerformances from cache'
+      tags:
+        - IndividualServices
+      security:
+        - apiKeyAuth: []
+      responses:
+        '200':
+          description: 'PureEthernetStructureHistoricalPerformances provided from cache'
+          content:
+            application/json:
+              schema:
+                type: object
+                required:
+                  - pure-ethernet-structure-2-0:pure-ethernet-structure-historical-performances
+                properties:
+                  pure-ethernet-structure-2-0:pure-ethernet-structure-historical-performances:
+                    $ref: '#/components/schemas/pure-ethernet-structure-historical-performances'
+                example:
+                  pure-ethernet-structure-2-0:pure-ethernet-structure-historical-performances:
+                    number-of-historical-performance-sets: 0
+                    time-of-latest-change: '2010-11-20T14:00:00+01:00'
+                    historical-performance-data-list:
+                      - suspect-interval-flag: true
+                        history-data-id: 'string'
+                        granularity-period: 'pure-ethernet-structure-2-0:GRANULARITY_PERIOD_TYPE_UNKNOWN'
+                        period-end-time: '2010-11-20T14:00:00+01:00'
+                        performance-data:
+                          time-period: 0
+                          es: 0
+                          ses: 0
+                          cses: 0
+                          unavailability: 0
+                          rx-level-min: 0
+                          rx-level-max: 0
+                          rx-level-avg: 0
+          headers:
+            x-correlator:
+              $ref: '#/components/headers/x-correlator'
+            exec-time:
+              $ref: '#/components/headers/exec-time'
+            backend-time:
+              $ref: '#/components/headers/backend-time'
+            life-cycle-state:
+              $ref: '#/components/headers/life-cycle-state'
+        '4XX':
+          $ref: '#/components/responses/responseForErroredServiceRequests'
+        '500':
+          $ref: '#/components/responses/responseForErroredServiceRequests'
+        default:
+          $ref: '#/components/responses/responseForErroredServiceRequests'
+
+  /generic/core-model-1-4:network-control-domain=live/control-construct={mountName}/pure-ethernet-structure-2-0:clear-threshold-cross-alarms:
+    parameters:
+      - $ref: '#/components/parameters/user'
+      - $ref: '#/components/parameters/originator'
+      - $ref: '#/components/parameters/x-correlator'
+      - $ref: '#/components/parameters/trace-indicator'
+      - $ref: '#/components/parameters/customer-journey'
+      - $ref: '#/components/parameters/mountName'
+    post:
+      operationId: postClearThresholdCrossAlarms
+      summary: 'Clears all currently active threshold cross alarms at the referenced PureEthernetStructure'
+      tags:
+        - IndividualServices
+      security:
+        - apiKeyAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - input
+              properties:
+                input:
+                  type: object
+                  required:
+                    - affected-pure-ethernet-structure
+                  properties:
+                    affected-pure-ethernet-structure:
+                      type: string
+      responses:
+        '204':
+          description: 'Threshold cross alarms cleared'
+          headers:
+            x-correlator:
+              $ref: '#/components/headers/x-correlator'
+            exec-time:
+              $ref: '#/components/headers/exec-time'
+            backend-time:
+              $ref: '#/components/headers/backend-time'
+            life-cycle-state:
+              $ref: '#/components/headers/life-cycle-state'
+        '4XX':
+          $ref: '#/components/responses/responseForErroredServiceRequests'
+        '500':
+          $ref: '#/components/responses/responseForErroredServiceRequests'
+        default:
+          $ref: '#/components/responses/responseForErroredServiceRequests'
+
+
+########################################################################################################################
+#   Common Components
+########################################################################################################################
+components:
+  parameters:
+    user:
+      name: user
+      in: header
+      required: true
+      schema:
+        type: string
+        example: 'User Name'
+      description: 'User identifier from the system starting the service call'
+    originator:
+      name: originator
+      in: header
+      required: true
+      schema:
+        type: string
+        minLength: 3
+        example: 'Resolver'
+      description: >
+        'Identification for the system consuming the API, as defined in
+         [/core-model-1-4:control-construct/logical-termination-point={uuid}/layer-protocol=0/http-client-interface-1-0:http-client-interface-pac/http-client-interface-configuration/application-name]'
+    x-correlator:
+      name: x-correlator
+      in: header
+      required: true
+      schema:
+        type: string
+        pattern: '^[0-9A-Fa-f]{8}(?:-[0-9A-Fa-f]{4}){3}-[0-9A-Fa-f]{12}$'
+        description: 'Empty string accepted from external applications.'
+        example: '550e8400-e29b-11d4-a716-446655440000'
+      description: 'UUID for the service execution flow that allows to correlate requests and responses'
+    trace-indicator:
+      name: trace-indicator
+      in: header
+      required: true
+      schema:
+        type: string
+        pattern: '^([0-9]+)(\.([0-9]+))*$'
+        description: 'Empty string accepted from external applications.'
+        example: '1.3.1'
+      description: 'Sequence of request numbers along the flow'
+    customer-journey:
+      name: customer-journey
+      in: header
+      required: true
+      schema:
+        type: string
+        example: 'Unknown value'
+      description: 'Holds information supporting customer’s journey to which the execution applies'
+    mountName:
+      name: mountName
+      in: path
+      required: true
+      schema:
+        type: string
+        example: '222250001'
+      description: 'The mountName of the device that is addressed by the request'
+    uuid:
+      name: uuid
+      in: path
+      required: true
+      schema:
+        type: string
+        example: 'LTP-MWPS-TTP-1-1'
+      description: 'Instance identifier that is unique within the device'
+    uuid1:
+      name: uuid1
+      in: path
+      required: true
+      schema:
+        type: string
+        example: 'LTP-MWPS-TTP-1-1'
+      description: 'Another instance identifier that is unique within the device'
+    localId:
+      name: localId
+      in: path
+      required: true
+      schema:
+        type: string
+        example: 'LP-MWPS-TTP-1-1'
+      description: 'Instance identifier that is unique within its list'
+    fields:
+      name: fields
+      in: query
+      required: false
+      schema:
+        type: string
+        example: 'node(node-id;netconf-node-topology:connection-status)'
+      description: 'Query parameter to filter ressources according to RFC8040 fields filter spec'
+  responses:
+    responseForErroredServiceRequests:
+      description: 'Response in case of errored service requests'
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/errorDescription'
+      headers:
+        x-correlator:
+          schema:
+            type: string
+            pattern: '^[0-9A-Fa-f]{8}(?:-[0-9A-Fa-f]{4}){3}-[0-9A-Fa-f]{12}$'
+            example: '550e8400-e29b-11d4-a716-446655440000'
+          description: 'UUID for the service execution flow that allows to correlate requests and responses. Its value must be identical at the response compared with its corresponding request'
+        exec-time:
+          schema:
+            type: integer
+            example: 1100
+          description: 'Value written by the service provider, reporting the total elapsed time for the execution, including all the additional processing needed to retrieve the data from the backend service. Expressed in milliseconds'
+        backend-time:
+          schema:
+            type: integer
+            example: 850
+          description: 'Value written by the service provider, reporting the elapsed time for data retrieval from the backend (service invocation, database access…). Expressed in milliseconds'
+    responseForErroredOamRequests:
+      description: 'Response in case of errored OaM requests'
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/errorDescription'
+  headers:
+    x-correlator:
+      schema:
+        type: string
+        example: '550e8400-e29b-11d4-a716-446655440000'
+      description: 'UUID for the service execution flow that allows to correlate requests and responses. Its value must be identical at the response compared with its corresponding request'
+    exec-time:
+      schema:
+        type: integer
+        example: 1100
+      description: 'Value written by the service provider, reporting the total elapsed time for the execution, including all the additional processing needed to retrieve the data from the backend service. Expressed in milliseconds'
+    backend-time:
+      schema:
+        type: integer
+        example: 850
+      description: 'Value written by the service provider, reporting the elapsed time for data retrieval from the backend (service invocation, database access…). Expressed in milliseconds'
+    life-cycle-state:
+      schema:
+        type: string
+        enum:
+          - 'EXPERIMENTAL'
+          - 'OPERATIONAL'
+          - 'DEPRECATED'
+          - 'OBSOLETE'
+          - 'UNKNOWN'
+          - 'NOT_YET_DEFINED'
+        example: 'EXPERIMENTAL'
+  schemas:
+    errorDescription:
+      type: object
+      required:
+        - code
+        - message
+      properties:
+        code:
+          type: integer
+          format: int32
+        message:
+          type: string
+
+    pure-ethernet-structure-capability:
+      type: object
+      required:
+        - performance-monitoring-is-avail
+      properties:
+        performance-monitoring-is-avail:
+          type: boolean
+    pure-ethernet-structure-configuration:
+      type: object
+      required:
+        - performance-monitoring-is-on
+      properties:
+        g-826-threshold-cross-alarm-list:
+          type: array
+          minItems: 0
+          x-key: g-826-value-kind granularity-period
+          items:
+            type: object
+            required:
+              - g-826-value-kind
+              - alarm-raising-threshold
+              - alarm-clearing-threshold
+              - granularity-period
+            properties:
+              g-826-value-kind:
+                type: string
+                enum:
+                  - 'pure-ethernet-structure-2-0:G_826_TYPE_ES'
+                  - 'pure-ethernet-structure-2-0:G_826_TYPE_SES'
+                  - 'pure-ethernet-structure-2-0:G_826_TYPE_CSES'
+                  - 'pure-ethernet-structure-2-0:G_826_TYPE_UAS'
+                  - 'pure-ethernet-structure-2-0:G_826_TYPE_NOT_SPECIFIED'
+              alarm-raising-threshold:
+                type: integer
+                format: int32
+              alarm-clearing-threshold:
+                type: integer
+                format: int32
+              granularity-period:
+                type: string
+                enum:
+                  - 'pure-ethernet-structure-2-0:GRANULARITY_PERIOD_TYPE_UNKNOWN'
+                  - 'pure-ethernet-structure-2-0:GRANULARITY_PERIOD_TYPE_PERIOD-15-MIN'
+                  - 'pure-ethernet-structure-2-0:GRANULARITY_PERIOD_TYPE_PERIOD-24-HOURS'
+                  - 'pure-ethernet-structure-2-0:GRANULARITY_PERIOD_TYPE_NOT_YET_DEFINED'
+        performance-monitoring-is-on:
+          type: boolean
+    pure-ethernet-structure-status:
+      type: object
+      required:
+        - segment-status-list
+        - performance-monitoring-is-up
+      properties:
+        segment-status-list:
+          type: array
+          minItems: 1
+          x-key: segment-status-type-id
+          items:
+            type: object
+            required:
+              - segment-status-type-id
+              - operational-status
+            properties:
+              segment-status-type-id:
+                type: integer
+                format: int16
+              operational-status:
+                type: string
+                enum:
+                  - 'pure-ethernet-structure-2-0:OPERATIONAL_STATE_TYPE_ENABLED'
+                  - 'pure-ethernet-structure-2-0:OPERATIONAL_STATE_TYPE_DISABLED'
+                  - 'pure-ethernet-structure-2-0:OPERATIONAL_STATE_TYPE_NOT_YET_DEFINED'
+        performance-monitoring-is-up:
+          type: boolean
+          description: true = Performance values are currently collected and aggregated.
+    pure-ethernet-structure-current-performance:
+      type: object
+      required:
+        - current-performance-data-list
+        - number-of-current-performance-sets
+      properties:
+        number-of-current-performance-sets:
+          type: integer
+          format: int8
+        current-performance-data-list:
+          type: array
+          minItems: 1
+          maxItems: 2
+          x-key: granularity-period
+          items:
+            type: object
+            required:
+              - timestamp
+              - suspect-interval-flag
+              - elapsed-time
+              - scanner-id
+              - granularity-period
+              - performance-data
+            properties:
+              timestamp:
+                type: string
+                pattern: '^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(\.\d+)?(Z|[\+\-]\d{2}:\d{2})$'
+              suspect-interval-flag:
+                type: boolean
+              elapsed-time:
+                type: string
+              scanner-id:
+                type: string
+              granularity-period:
+                type: string
+                enum:
+                  - 'pure-ethernet-structure-2-0:GRANULARITY_PERIOD_TYPE_UNKNOWN'
+                  - 'pure-ethernet-structure-2-0:GRANULARITY_PERIOD_TYPE_PERIOD-15-MIN'
+                  - 'pure-ethernet-structure-2-0:GRANULARITY_PERIOD_TYPE_PERIOD-24-HOURS'
+                  - 'pure-ethernet-structure-2-0:GRANULARITY_PERIOD_TYPE_NOT_YET_DEFINED'
+              performance-data:
+                type: object
+                required:
+                  - time-period
+                  - es
+                  - ses
+                  - cses
+                  - unavailability
+                  - rx-level-min
+                  - rx-level-max
+                  - rx-level-avg
+                properties:
+                  time-period:
+                    type: integer
+                    format: int32
+                  es:
+                    type: integer
+                    format: int32
+                  ses:
+                    type: integer
+                    format: int32
+                  cses:
+                    type: integer
+                    format: int32
+                  unavailability:
+                    type: integer
+                    format: int32
+                  rx-level-min:
+                    type: integer
+                    format: int8
+                  rx-level-max:
+                    type: integer
+                    format: int8
+                  rx-level-avg:
+                    type: integer
+                    format: int8
+    pure-ethernet-structure-historical-performances:
+      type: object
+      required:
+        - number-of-historical-performance-sets
+        - time-of-latest-change
+      properties:
+        number-of-historical-performance-sets:
+          type: integer
+          format: int16
+        time-of-latest-change:
+          type: string
+          pattern: '^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(\.\d+)?(Z|[\+\-]\d{2}:\d{2})$'
+        historical-performance-data-list:
+          type: array
+          minItems: 0
+          x-key: granularity-period period-end-time
+          items:
+            type: object
+            required:
+              - suspect-interval-flag
+              - history-data-id
+              - granularity-period
+              - period-end-time
+              - performance-data
+            properties:
+              suspect-interval-flag:
+                type: boolean
+              history-data-id:
+                type: string
+              granularity-period:
+                type: string
+                enum:
+                  - 'pure-ethernet-structure-2-0:GRANULARITY_PERIOD_TYPE_UNKNOWN'
+                  - 'pure-ethernet-structure-2-0:GRANULARITY_PERIOD_TYPE_PERIOD-15-MIN'
+                  - 'pure-ethernet-structure-2-0:GRANULARITY_PERIOD_TYPE_PERIOD-24-HOURS'
+                  - 'pure-ethernet-structure-2-0:GRANULARITY_PERIOD_TYPE_NOT_YET_DEFINED'
+              period-end-time:
+                type: string
+                pattern: '^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(\.\d+)?(Z|[\+\-]\d{2}:\d{2})$'
+              performance-data:
+                type: object
+                required:
+                  - time-period
+                  - es
+                  - ses
+                  - cses
+                  - unavailability
+                  - rx-level-min
+                  - rx-level-max
+                  - rx-level-avg
+                properties:
+                  time-period:
+                    type: integer
+                    format: int32
+                  es:
+                    type: integer
+                    format: int32
+                  ses:
+                    type: integer
+                    format: int32
+                  cses:
+                    type: integer
+                    format: int32
+                  unavailability:
+                    type: integer
+                    format: int32
+                  rx-level-min:
+                    type: integer
+                    format: int8
+                  rx-level-max:
+                    type: integer
+                    format: int8
+                  rx-level-avg:
+                    type: integer
+                    format: int8
+    pure-ethernet-structure-2-0:clear-threshold-cross-alarms:
+
+  securitySchemes:
+    apiKeyAuth:
+      type: apiKey
+      in: header
+      name: operation-key
+    basicAuth:
+      type: http
+      scheme: basic

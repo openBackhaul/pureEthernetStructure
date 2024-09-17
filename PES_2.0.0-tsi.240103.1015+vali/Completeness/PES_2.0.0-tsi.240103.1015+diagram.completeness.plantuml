@@ -1,0 +1,81 @@
+@startuml PES_2.0.0-tsi.240103.1015+diagram.completeness
+skinparam responseMessageBelowArrow true
+
+title
+PES_2.0.0-tsi.240103.1015+testcase.completeness
+end title
+
+participant "Postman" as Postman
+participant "Data" as Data
+participant "Collection" as Collection
+
+participant "/control-construct?fields=..." as ListOfLTPUuidAndLidPairsAndNames
+
+participant "/pure-ethernet-structure-capability" as Capability
+participant "/pure-ethernet-structure-configuration" as Configuration
+participant "/pure-ethernet-structure-status" as Status
+participant "/pure-ethernet-structure-current-performance" as CurrentPerformance
+participant "/pure-ethernet-structure-historical-performances" as HistoricalPerformances
+
+group Preparation
+  Data --\\o Postman : {servers,\n   mountName,\n   kindOfReference,\n   suffixUrlEncodingIsRequired}
+  activate Postman
+  Postman --\\o Collection : {servers,\n   mountName,\n   kindOfReference,\n   suffixUrlEncodingIsRequired}
+
+  Collection --\\o Postman : {mountName}
+  Postman -> ListOfLTPUuidAndLidPairsAndNames : {mountName}
+  Postman <-- ListOfLTPUuidAndLidPairsAndNames : {(uuid, localId, layerProtocolName)}
+  note right Postman
+    selection of PureEthernetStructure
+  end note
+  Postman --\\o Collection : {uuid, localId}
+end
+
+group /pure-ethernet-structure-capability
+  Collection --\\o Postman : {mountName, uuid, localId}
+  Postman -> Capability : {mountName, uuid, localId}
+  Postman <-- Capability : {CapabilityClass}
+  note right Postman
+    schema validation
+  end note
+end
+
+group /pure-ethernet-structure-configuration
+  Collection --\\o Postman : {mountName, uuid, localId}
+  Postman -> Configuration : {mountName, uuid, localId}
+  Postman <-- Configuration : {ConfigurationClass}
+  note right Postman
+    schema validation
+  end note
+end
+
+group /pure-ethernet-structure-status
+  Collection --\\o Postman : {mountName, uuid, localId}
+  Postman -> Status : {mountName, uuid, localId}
+  Postman <-- Status : {StatusClass}
+  note right Postman
+    schema validation
+  end note
+end
+
+group /pure-ethernet-structure-current-performance
+  Collection --\\o Postman : {mountName, uuid, localId}
+  Postman -> CurrentPerformance : {mountName, uuid, localId}
+  Postman <-- CurrentPerformance : {CurrentPerformanceClass}
+  note right Postman
+    schema validation
+  end note
+end
+
+group /pure-ethernet-structure-historical-performances
+  Collection --\\o Postman : {mountName, uuid, localId}
+  Postman -> HistoricalPerformances : {mountName, uuid, localId}
+  Postman <-- HistoricalPerformances : {HistoricalPerformancesClass}
+  note right Postman
+    schema validation
+  end note
+end
+
+deactivate Postman
+
+@enduml
