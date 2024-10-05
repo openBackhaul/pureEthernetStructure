@@ -16,6 +16,7 @@ participant "/pure-ethernet-structure-configuration" as Configuration
 participant "/pure-ethernet-structure-status" as Status
 participant "/pure-ethernet-structure-current-performance" as CurrentPerformance
 participant "/pure-ethernet-structure-historical-performances" as HistoricalPerformances
+participant "/clear-threshold-cross-alarms" as ClearThresholdCrossAlarms
 
 group Preparation
   Data --\\o Postman : {servers,\n   mountName,\n   kindOfReference,\n   suffixUrlEncodingIsRequired}
@@ -73,6 +74,15 @@ group /pure-ethernet-structure-historical-performances
   Postman <-- HistoricalPerformances : {HistoricalPerformancesClass}
   note right Postman
     schema validation
+  end note
+end
+
+group /clear-threshold-cross-alarms
+  Collection --\\o Postman : {mountName, uuid, \n suffixUrlEncodingIsRequired}
+  Postman -> ClearThresholdCrossAlarms : {mountName, uuid}
+  Postman <-- ClearThresholdCrossAlarms : 204
+  note right Postman
+    f(x)==204?
   end note
 end
 
